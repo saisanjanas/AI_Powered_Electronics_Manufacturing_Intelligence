@@ -1,0 +1,451 @@
+quality_id,production_id,inspection_date,defect_type,defect_count,quality_status
+1,1,2026-07-20,PCB Damage,17,Fail
+2,2,2026-07-20,Overheating,9,Pass
+3,3,2026-07-20,Solder Defect,3,Pass
+4,4,2026-07-20,PCB Damage,24,Fail
+5,5,2026-07-20,Component Misplacement,3,Pass
+6,6,2026-07-20,Overheating,18,Fail
+7,7,2026-07-20,Solder Defect,5,Pass
+8,8,2026-07-20,Missing Component,2,Pass
+9,9,2026-07-20,Missing Component,11,Pass
+10,10,2026-07-20,Component Misplacement,8,Pass
+11,11,2026-07-20,Overheating,10,Pass
+12,12,2026-07-20,Overheating,5,Pass
+13,13,2026-07-20,PCB Damage,8,Pass
+14,14,2026-07-20,Solder Defect,10,Pass
+15,15,2026-07-20,Solder Defect,9,Pass
+16,16,2026-07-21,Overheating,6,Pass
+17,17,2026-07-21,Component Misplacement,14,Pass
+18,18,2026-07-21,Missing Component,12,Pass
+19,19,2026-07-21,Overheating,2,Pass
+20,20,2026-07-21,Component Misplacement,13,Pass
+21,21,2026-07-21,Missing Component,9,Pass
+22,22,2026-07-21,PCB Damage,7,Pass
+23,23,2026-07-21,Component Misplacement,11,Pass
+24,24,2026-07-21,Component Misplacement,20,Fail
+25,25,2026-07-21,PCB Damage,3,Pass
+26,26,2026-07-21,Missing Component,7,Pass
+27,27,2026-07-21,Missing Component,5,Pass
+28,28,2026-07-21,Overheating,4,Pass
+29,29,2026-07-21,Solder Defect,5,Pass
+30,30,2026-07-21,Component Misplacement,8,Pass
+31,31,2026-07-22,Solder Defect,2,Pass
+32,32,2026-07-22,Missing Component,25,Fail
+33,33,2026-07-22,Missing Component,2,Pass
+34,34,2026-07-22,PCB Damage,24,Fail
+35,35,2026-07-22,Overheating,22,Fail
+36,36,2026-07-22,PCB Damage,2,Pass
+37,37,2026-07-22,Overheating,9,Pass
+38,38,2026-07-22,Missing Component,14,Pass
+39,39,2026-07-22,Overheating,5,Pass
+40,40,2026-07-22,Component Misplacement,5,Pass
+41,41,2026-07-22,Solder Defect,24,Fail
+42,42,2026-07-22,Missing Component,13,Pass
+43,43,2026-07-22,Component Misplacement,20,Fail
+44,44,2026-07-22,Missing Component,7,Pass
+45,45,2026-07-22,Component Misplacement,9,Pass
+46,46,2026-07-23,Solder Defect,9,Pass
+47,47,2026-07-23,PCB Damage,5,Pass
+48,48,2026-07-23,Solder Defect,8,Pass
+49,49,2026-07-23,Missing Component,7,Pass
+50,50,2026-07-23,Component Misplacement,12,Pass
+51,51,2026-07-23,PCB Damage,19,Fail
+52,52,2026-07-23,Missing Component,17,Fail
+53,53,2026-07-23,Component Misplacement,19,Fail
+54,54,2026-07-23,Solder Defect,4,Pass
+55,55,2026-07-23,Component Misplacement,11,Pass
+56,56,2026-07-23,Component Misplacement,22,Fail
+57,57,2026-07-23,PCB Damage,8,Pass
+58,58,2026-07-23,Missing Component,12,Pass
+59,59,2026-07-23,Overheating,3,Pass
+60,60,2026-07-23,PCB Damage,6,Pass
+61,61,2026-07-24,Component Misplacement,5,Pass
+62,62,2026-07-24,Component Misplacement,12,Pass
+63,63,2026-07-24,Solder Defect,13,Pass
+64,64,2026-07-24,Overheating,15,Fail
+65,65,2026-07-24,Missing Component,25,Fail
+66,66,2026-07-24,Solder Defect,7,Pass
+67,67,2026-07-24,Overheating,6,Pass
+68,68,2026-07-24,PCB Damage,2,Pass
+69,69,2026-07-24,Solder Defect,2,Pass
+70,70,2026-07-24,Component Misplacement,9,Pass
+71,71,2026-07-24,Component Misplacement,3,Pass
+72,72,2026-07-24,Missing Component,11,Pass
+73,73,2026-07-24,Missing Component,4,Pass
+74,74,2026-07-24,Missing Component,22,Fail
+75,75,2026-07-24,Missing Component,12,Pass
+76,76,2026-07-25,Missing Component,10,Pass
+77,77,2026-07-25,Overheating,3,Pass
+78,78,2026-07-25,Component Misplacement,7,Pass
+79,79,2026-07-25,PCB Damage,14,Pass
+80,80,2026-07-25,Overheating,4,Pass
+81,81,2026-07-25,Component Misplacement,22,Fail
+82,82,2026-07-25,PCB Damage,3,Pass
+83,83,2026-07-25,Solder Defect,19,Fail
+84,84,2026-07-25,Solder Defect,14,Pass
+85,85,2026-07-25,Solder Defect,12,Pass
+86,86,2026-07-25,PCB Damage,15,Fail
+87,87,2026-07-25,Missing Component,2,Pass
+88,88,2026-07-25,Missing Component,20,Fail
+89,89,2026-07-25,Solder Defect,12,Pass
+90,90,2026-07-25,Missing Component,6,Pass
+91,91,2026-07-26,Missing Component,15,Fail
+92,92,2026-07-26,Component Misplacement,19,Fail
+93,93,2026-07-26,Missing Component,3,Pass
+94,94,2026-07-26,Overheating,16,Fail
+95,95,2026-07-26,PCB Damage,2,Pass
+96,96,2026-07-26,Overheating,4,Pass
+97,97,2026-07-26,Overheating,11,Pass
+98,98,2026-07-26,Component Misplacement,3,Pass
+99,99,2026-07-26,Overheating,4,Pass
+100,100,2026-07-26,Overheating,9,Pass
+101,101,2026-07-26,Component Misplacement,19,Fail
+102,102,2026-07-26,Overheating,9,Pass
+103,103,2026-07-26,Overheating,5,Pass
+104,104,2026-07-26,Overheating,8,Pass
+105,105,2026-07-26,Component Misplacement,26,Fail
+106,106,2026-07-27,Missing Component,8,Pass
+107,107,2026-07-27,Solder Defect,11,Pass
+108,108,2026-07-27,Overheating,12,Pass
+109,109,2026-07-27,Overheating,9,Pass
+110,110,2026-07-27,Missing Component,2,Pass
+111,111,2026-07-27,Missing Component,23,Fail
+112,112,2026-07-27,PCB Damage,19,Fail
+113,113,2026-07-27,Missing Component,1,Pass
+114,114,2026-07-27,Component Misplacement,22,Fail
+115,115,2026-07-27,Overheating,26,Fail
+116,116,2026-07-27,Solder Defect,12,Pass
+117,117,2026-07-27,Solder Defect,20,Fail
+118,118,2026-07-27,Missing Component,8,Pass
+119,119,2026-07-27,Solder Defect,11,Pass
+120,120,2026-07-27,Component Misplacement,18,Fail
+121,121,2026-07-28,Overheating,10,Pass
+122,122,2026-07-28,Component Misplacement,26,Fail
+123,123,2026-07-28,Solder Defect,16,Fail
+124,124,2026-07-28,Missing Component,15,Fail
+125,125,2026-07-28,Overheating,8,Pass
+126,126,2026-07-28,Missing Component,5,Pass
+127,127,2026-07-28,Overheating,15,Fail
+128,128,2026-07-28,Solder Defect,9,Pass
+129,129,2026-07-28,Solder Defect,18,Fail
+130,130,2026-07-28,PCB Damage,10,Pass
+131,131,2026-07-28,Overheating,11,Pass
+132,132,2026-07-28,Component Misplacement,9,Pass
+133,133,2026-07-28,Missing Component,11,Pass
+134,134,2026-07-28,PCB Damage,2,Pass
+135,135,2026-07-28,Missing Component,9,Pass
+136,136,2026-07-29,Component Misplacement,10,Pass
+137,137,2026-07-29,Component Misplacement,2,Pass
+138,138,2026-07-29,Missing Component,7,Pass
+139,139,2026-07-29,Solder Defect,17,Fail
+140,140,2026-07-29,Component Misplacement,5,Pass
+141,141,2026-07-29,Missing Component,6,Pass
+142,142,2026-07-29,Solder Defect,12,Pass
+143,143,2026-07-29,Component Misplacement,14,Pass
+144,144,2026-07-29,Component Misplacement,6,Pass
+145,145,2026-07-29,Missing Component,2,Pass
+146,146,2026-07-29,Component Misplacement,16,Fail
+147,147,2026-07-29,Overheating,11,Pass
+148,148,2026-07-29,Missing Component,7,Pass
+149,149,2026-07-29,Component Misplacement,8,Pass
+150,150,2026-07-29,Component Misplacement,12,Pass
+151,151,2026-07-30,Solder Defect,14,Pass
+152,152,2026-07-30,Missing Component,14,Pass
+153,153,2026-07-30,Component Misplacement,9,Pass
+154,154,2026-07-30,Missing Component,9,Pass
+155,155,2026-07-30,PCB Damage,1,Pass
+156,156,2026-07-30,Overheating,5,Pass
+157,157,2026-07-30,Solder Defect,7,Pass
+158,158,2026-07-30,Component Misplacement,2,Pass
+159,159,2026-07-30,Overheating,4,Pass
+160,160,2026-07-30,Missing Component,14,Pass
+161,161,2026-07-30,PCB Damage,9,Pass
+162,162,2026-07-30,Missing Component,2,Pass
+163,163,2026-07-30,Component Misplacement,7,Pass
+164,164,2026-07-30,Overheating,10,Pass
+165,165,2026-07-30,PCB Damage,4,Pass
+166,166,2026-07-31,PCB Damage,20,Fail
+167,167,2026-07-31,Missing Component,13,Pass
+168,168,2026-07-31,PCB Damage,15,Fail
+169,169,2026-07-31,Solder Defect,13,Pass
+170,170,2026-07-31,PCB Damage,11,Pass
+171,171,2026-07-31,Missing Component,12,Pass
+172,172,2026-07-31,Overheating,18,Fail
+173,173,2026-07-31,Component Misplacement,2,Pass
+174,174,2026-07-31,Solder Defect,7,Pass
+175,175,2026-07-31,PCB Damage,5,Pass
+176,176,2026-07-31,PCB Damage,23,Fail
+177,177,2026-07-31,Component Misplacement,15,Fail
+178,178,2026-07-31,Solder Defect,19,Fail
+179,179,2026-07-31,PCB Damage,16,Fail
+180,180,2026-07-31,Solder Defect,11,Pass
+181,181,2026-08-01,Solder Defect,8,Pass
+182,182,2026-08-01,Component Misplacement,17,Fail
+183,183,2026-08-01,Missing Component,23,Fail
+184,184,2026-08-01,Solder Defect,11,Pass
+185,185,2026-08-01,Solder Defect,6,Pass
+186,186,2026-08-01,PCB Damage,21,Fail
+187,187,2026-08-01,PCB Damage,9,Pass
+188,188,2026-08-01,Missing Component,23,Fail
+189,189,2026-08-01,Missing Component,15,Fail
+190,190,2026-08-01,PCB Damage,15,Fail
+191,191,2026-08-01,Overheating,5,Pass
+192,192,2026-08-01,Overheating,5,Pass
+193,193,2026-08-01,Missing Component,9,Pass
+194,194,2026-08-01,Overheating,12,Pass
+195,195,2026-08-01,Missing Component,2,Pass
+196,196,2026-08-02,PCB Damage,12,Pass
+197,197,2026-08-02,Component Misplacement,5,Pass
+198,198,2026-08-02,Missing Component,4,Pass
+199,199,2026-08-02,Component Misplacement,7,Pass
+200,200,2026-08-02,PCB Damage,4,Pass
+201,201,2026-08-02,Missing Component,2,Pass
+202,202,2026-08-02,PCB Damage,11,Pass
+203,203,2026-08-02,Overheating,1,Pass
+204,204,2026-08-02,Component Misplacement,21,Fail
+205,205,2026-08-02,Missing Component,19,Fail
+206,206,2026-08-02,Overheating,19,Fail
+207,207,2026-08-02,Solder Defect,11,Pass
+208,208,2026-08-02,Component Misplacement,11,Pass
+209,209,2026-08-02,Solder Defect,4,Pass
+210,210,2026-08-02,PCB Damage,12,Pass
+211,211,2026-08-03,Solder Defect,4,Pass
+212,212,2026-08-03,Overheating,6,Pass
+213,213,2026-08-03,Missing Component,11,Pass
+214,214,2026-08-03,PCB Damage,12,Pass
+215,215,2026-08-03,Missing Component,8,Pass
+216,216,2026-08-03,Solder Defect,15,Fail
+217,217,2026-08-03,Overheating,4,Pass
+218,218,2026-08-03,Overheating,7,Pass
+219,219,2026-08-03,PCB Damage,16,Fail
+220,220,2026-08-03,Solder Defect,9,Pass
+221,221,2026-08-03,Overheating,16,Fail
+222,222,2026-08-03,PCB Damage,22,Fail
+223,223,2026-08-03,Overheating,6,Pass
+224,224,2026-08-03,PCB Damage,3,Pass
+225,225,2026-08-03,PCB Damage,10,Pass
+226,226,2026-08-04,Overheating,3,Pass
+227,227,2026-08-04,Overheating,8,Pass
+228,228,2026-08-04,Overheating,17,Fail
+229,229,2026-08-04,Component Misplacement,20,Fail
+230,230,2026-08-04,Component Misplacement,10,Pass
+231,231,2026-08-04,Solder Defect,23,Fail
+232,232,2026-08-04,Solder Defect,9,Pass
+233,233,2026-08-04,Missing Component,12,Pass
+234,234,2026-08-04,Solder Defect,2,Pass
+235,235,2026-08-04,Solder Defect,23,Fail
+236,236,2026-08-04,Missing Component,27,Fail
+237,237,2026-08-04,Missing Component,6,Pass
+238,238,2026-08-04,Missing Component,6,Pass
+239,239,2026-08-04,Component Misplacement,20,Fail
+240,240,2026-08-04,Component Misplacement,15,Fail
+241,241,2026-08-05,Missing Component,13,Pass
+242,242,2026-08-05,Missing Component,3,Pass
+243,243,2026-08-05,Missing Component,3,Pass
+244,244,2026-08-05,PCB Damage,15,Fail
+245,245,2026-08-05,Missing Component,2,Pass
+246,246,2026-08-05,PCB Damage,12,Pass
+247,247,2026-08-05,Component Misplacement,9,Pass
+248,248,2026-08-05,PCB Damage,18,Fail
+249,249,2026-08-05,Overheating,24,Fail
+250,250,2026-08-05,Missing Component,6,Pass
+251,251,2026-08-05,Solder Defect,20,Fail
+252,252,2026-08-05,Overheating,6,Pass
+253,253,2026-08-05,PCB Damage,7,Pass
+254,254,2026-08-05,Overheating,11,Pass
+255,255,2026-08-05,PCB Damage,12,Pass
+256,256,2026-08-06,Overheating,14,Pass
+257,257,2026-08-06,Solder Defect,21,Fail
+258,258,2026-08-06,Solder Defect,13,Pass
+259,259,2026-08-06,Missing Component,6,Pass
+260,260,2026-08-06,Solder Defect,17,Fail
+261,261,2026-08-06,Solder Defect,15,Fail
+262,262,2026-08-06,Overheating,5,Pass
+263,263,2026-08-06,Missing Component,3,Pass
+264,264,2026-08-06,Solder Defect,8,Pass
+265,265,2026-08-06,Solder Defect,19,Fail
+266,266,2026-08-06,Component Misplacement,6,Pass
+267,267,2026-08-06,Overheating,5,Pass
+268,268,2026-08-06,Solder Defect,2,Pass
+269,269,2026-08-06,Component Misplacement,6,Pass
+270,270,2026-08-06,PCB Damage,11,Pass
+271,271,2026-08-07,Missing Component,4,Pass
+272,272,2026-08-07,Missing Component,10,Pass
+273,273,2026-08-07,PCB Damage,15,Fail
+274,274,2026-08-07,Solder Defect,10,Pass
+275,275,2026-08-07,Overheating,11,Pass
+276,276,2026-08-07,Missing Component,10,Pass
+277,277,2026-08-07,Overheating,9,Pass
+278,278,2026-08-07,Missing Component,10,Pass
+279,279,2026-08-07,PCB Damage,11,Pass
+280,280,2026-08-07,Component Misplacement,24,Fail
+281,281,2026-08-07,Solder Defect,15,Fail
+282,282,2026-08-07,Solder Defect,7,Pass
+283,283,2026-08-07,PCB Damage,7,Pass
+284,284,2026-08-07,Solder Defect,9,Pass
+285,285,2026-08-07,PCB Damage,2,Pass
+286,286,2026-08-08,Missing Component,5,Pass
+287,287,2026-08-08,PCB Damage,4,Pass
+288,288,2026-08-08,PCB Damage,15,Fail
+289,289,2026-08-08,PCB Damage,16,Fail
+290,290,2026-08-08,Component Misplacement,8,Pass
+291,291,2026-08-08,Missing Component,7,Pass
+292,292,2026-08-08,Missing Component,16,Fail
+293,293,2026-08-08,Solder Defect,4,Pass
+294,294,2026-08-08,Component Misplacement,6,Pass
+295,295,2026-08-08,Missing Component,6,Pass
+296,296,2026-08-08,Component Misplacement,24,Fail
+297,297,2026-08-08,PCB Damage,3,Pass
+298,298,2026-08-08,PCB Damage,4,Pass
+299,299,2026-08-08,Solder Defect,4,Pass
+300,300,2026-08-08,Overheating,8,Pass
+301,301,2026-08-09,PCB Damage,11,Pass
+302,302,2026-08-09,PCB Damage,16,Fail
+303,303,2026-08-09,Missing Component,27,Fail
+304,304,2026-08-09,Solder Defect,20,Fail
+305,305,2026-08-09,Overheating,4,Pass
+306,306,2026-08-09,Overheating,16,Fail
+307,307,2026-08-09,Missing Component,9,Pass
+308,308,2026-08-09,PCB Damage,8,Pass
+309,309,2026-08-09,PCB Damage,4,Pass
+310,310,2026-08-09,PCB Damage,12,Pass
+311,311,2026-08-09,Solder Defect,4,Pass
+312,312,2026-08-09,Component Misplacement,18,Fail
+313,313,2026-08-09,Overheating,3,Pass
+314,314,2026-08-09,Missing Component,14,Pass
+315,315,2026-08-09,Missing Component,10,Pass
+316,316,2026-08-10,PCB Damage,6,Pass
+317,317,2026-08-10,Solder Defect,9,Pass
+318,318,2026-08-10,Missing Component,14,Pass
+319,319,2026-08-10,Overheating,10,Pass
+320,320,2026-08-10,PCB Damage,7,Pass
+321,321,2026-08-10,Component Misplacement,22,Fail
+322,322,2026-08-10,Missing Component,12,Pass
+323,323,2026-08-10,Solder Defect,21,Fail
+324,324,2026-08-10,Missing Component,3,Pass
+325,325,2026-08-10,PCB Damage,18,Fail
+326,326,2026-08-10,Component Misplacement,17,Fail
+327,327,2026-08-10,Solder Defect,6,Pass
+328,328,2026-08-10,PCB Damage,6,Pass
+329,329,2026-08-10,PCB Damage,19,Fail
+330,330,2026-08-10,Missing Component,12,Pass
+331,331,2026-08-11,Component Misplacement,12,Pass
+332,332,2026-08-11,Missing Component,14,Pass
+333,333,2026-08-11,Solder Defect,11,Pass
+334,334,2026-08-11,Solder Defect,8,Pass
+335,335,2026-08-11,PCB Damage,8,Pass
+336,336,2026-08-11,Solder Defect,22,Fail
+337,337,2026-08-11,Overheating,12,Pass
+338,338,2026-08-11,Overheating,6,Pass
+339,339,2026-08-11,Missing Component,3,Pass
+340,340,2026-08-11,Missing Component,25,Fail
+341,341,2026-08-11,Solder Defect,14,Pass
+342,342,2026-08-11,Overheating,23,Fail
+343,343,2026-08-11,PCB Damage,8,Pass
+344,344,2026-08-11,PCB Damage,20,Fail
+345,345,2026-08-11,PCB Damage,8,Pass
+346,346,2026-08-12,Missing Component,11,Pass
+347,347,2026-08-12,PCB Damage,4,Pass
+348,348,2026-08-12,PCB Damage,16,Fail
+349,349,2026-08-12,Solder Defect,14,Pass
+350,350,2026-08-12,Component Misplacement,4,Pass
+351,351,2026-08-12,Solder Defect,21,Fail
+352,352,2026-08-12,PCB Damage,9,Pass
+353,353,2026-08-12,PCB Damage,7,Pass
+354,354,2026-08-12,Missing Component,10,Pass
+355,355,2026-08-12,Solder Defect,15,Fail
+356,356,2026-08-12,Solder Defect,17,Fail
+357,357,2026-08-12,Missing Component,9,Pass
+358,358,2026-08-12,Overheating,8,Pass
+359,359,2026-08-12,Solder Defect,15,Fail
+360,360,2026-08-12,Solder Defect,14,Pass
+361,361,2026-08-13,Solder Defect,12,Pass
+362,362,2026-08-13,Overheating,17,Fail
+363,363,2026-08-13,PCB Damage,17,Fail
+364,364,2026-08-13,Solder Defect,21,Fail
+365,365,2026-08-13,Missing Component,10,Pass
+366,366,2026-08-13,Component Misplacement,22,Fail
+367,367,2026-08-13,Solder Defect,12,Pass
+368,368,2026-08-13,Overheating,12,Pass
+369,369,2026-08-13,Missing Component,18,Fail
+370,370,2026-08-13,Component Misplacement,2,Pass
+371,371,2026-08-13,Overheating,12,Pass
+372,372,2026-08-13,Missing Component,11,Pass
+373,373,2026-08-13,Missing Component,11,Pass
+374,374,2026-08-13,Overheating,6,Pass
+375,375,2026-08-13,Solder Defect,5,Pass
+376,376,2026-08-14,Solder Defect,6,Pass
+377,377,2026-08-14,Solder Defect,10,Pass
+378,378,2026-08-14,Missing Component,5,Pass
+379,379,2026-08-14,Solder Defect,3,Pass
+380,380,2026-08-14,Missing Component,12,Pass
+381,381,2026-08-14,Overheating,3,Pass
+382,382,2026-08-14,Missing Component,18,Fail
+383,383,2026-08-14,PCB Damage,4,Pass
+384,384,2026-08-14,Missing Component,10,Pass
+385,385,2026-08-14,Missing Component,4,Pass
+386,386,2026-08-14,Missing Component,5,Pass
+387,387,2026-08-14,Component Misplacement,18,Fail
+388,388,2026-08-14,Solder Defect,3,Pass
+389,389,2026-08-14,Solder Defect,11,Pass
+390,390,2026-08-14,Overheating,6,Pass
+391,391,2026-08-15,Component Misplacement,5,Pass
+392,392,2026-08-15,PCB Damage,7,Pass
+393,393,2026-08-15,Solder Defect,10,Pass
+394,394,2026-08-15,Overheating,8,Pass
+395,395,2026-08-15,PCB Damage,2,Pass
+396,396,2026-08-15,Missing Component,6,Pass
+397,397,2026-08-15,Overheating,1,Pass
+398,398,2026-08-15,Solder Defect,3,Pass
+399,399,2026-08-15,PCB Damage,6,Pass
+400,400,2026-08-15,Solder Defect,9,Pass
+401,401,2026-08-15,Overheating,13,Pass
+402,402,2026-08-15,Component Misplacement,17,Fail
+403,403,2026-08-15,Solder Defect,11,Pass
+404,404,2026-08-15,Overheating,5,Pass
+405,405,2026-08-15,Solder Defect,2,Pass
+406,406,2026-08-16,PCB Damage,2,Pass
+407,407,2026-08-16,Solder Defect,14,Pass
+408,408,2026-08-16,PCB Damage,10,Pass
+409,409,2026-08-16,PCB Damage,3,Pass
+410,410,2026-08-16,Overheating,6,Pass
+411,411,2026-08-16,Missing Component,10,Pass
+412,412,2026-08-16,Overheating,10,Pass
+413,413,2026-08-16,Missing Component,6,Pass
+414,414,2026-08-16,Solder Defect,21,Fail
+415,415,2026-08-16,Missing Component,23,Fail
+416,416,2026-08-16,Solder Defect,15,Fail
+417,417,2026-08-16,Overheating,12,Pass
+418,418,2026-08-16,Solder Defect,3,Pass
+419,419,2026-08-16,Component Misplacement,15,Fail
+420,420,2026-08-16,Missing Component,5,Pass
+421,421,2026-08-17,Missing Component,18,Fail
+422,422,2026-08-17,PCB Damage,10,Pass
+423,423,2026-08-17,Missing Component,2,Pass
+424,424,2026-08-17,Missing Component,24,Fail
+425,425,2026-08-17,Solder Defect,4,Pass
+426,426,2026-08-17,Overheating,15,Fail
+427,427,2026-08-17,Component Misplacement,6,Pass
+428,428,2026-08-17,Overheating,2,Pass
+429,429,2026-08-17,Component Misplacement,6,Pass
+430,430,2026-08-17,Solder Defect,10,Pass
+431,431,2026-08-17,Missing Component,12,Pass
+432,432,2026-08-17,PCB Damage,2,Pass
+433,433,2026-08-17,Overheating,5,Pass
+434,434,2026-08-17,Component Misplacement,7,Pass
+435,435,2026-08-17,Missing Component,4,Pass
+436,436,2026-08-18,Solder Defect,6,Pass
+437,437,2026-08-18,Component Misplacement,7,Pass
+438,438,2026-08-18,Solder Defect,15,Fail
+439,439,2026-08-18,Solder Defect,11,Pass
+440,440,2026-08-18,Solder Defect,7,Pass
+441,441,2026-08-18,Overheating,6,Pass
+442,442,2026-08-18,Component Misplacement,13,Pass
+443,443,2026-08-18,Overheating,3,Pass
+444,444,2026-08-18,Overheating,2,Pass
+445,445,2026-08-18,Missing Component,20,Fail
+446,446,2026-08-18,PCB Damage,8,Pass
+447,447,2026-08-18,Missing Component,17,Fail
+448,448,2026-08-18,PCB Damage,20,Fail
+449,449,2026-08-18,Component Misplacement,9,Pass
+450,450,2026-08-18,Missing Component,3,Pass
