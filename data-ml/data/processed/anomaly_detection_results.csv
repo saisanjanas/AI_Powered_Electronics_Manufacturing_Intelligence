@@ -1,0 +1,6 @@
+machine_id,anomaly_score,anomaly_status,anomaly_reason
+1,0.048115506284769904,Normal,No unusual behaviour detected
+2,0.1484828923079073,Normal,No unusual behaviour detected
+3,-0.12576280720217814,Anomaly,"High downtime, Frequent downtime, High sensor value, High sensor variation"
+4,0.10320222146986885,Normal,No unusual behaviour detected
+5,0.031440701800544535,Normal,Frequent maintenance

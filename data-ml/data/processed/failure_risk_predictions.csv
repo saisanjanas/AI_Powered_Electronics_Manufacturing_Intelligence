@@ -1,0 +1,6 @@
+machine_id,failure_risk_score,failure_risk,risk_reason
+1,0.11380750148594805,Low Risk,Normal operating conditions
+2,0.19610251872302256,Low Risk,Normal operating conditions
+3,0.9,High Risk,"High downtime, Frequent downtime, High sensor value, High sensor variation"
+4,0.1696276391421256,Low Risk,Normal operating conditions
+5,0.22100840336134464,Medium Risk,Frequent maintenance
