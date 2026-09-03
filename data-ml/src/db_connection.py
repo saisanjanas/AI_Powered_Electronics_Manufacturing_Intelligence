@@ -5,7 +5,7 @@ def get_connection():
         host="localhost",
         user="root",
         password="saisanjanas24",
-        database=" electronics_manufacturing_db"
+        database="electronics_manufacturing_db"
     )
 
     return connection

@@ -6,13 +6,13 @@ from datetime import datetime, timedelta
 np.random.seed(42)
 
 # Number of days to simulate
-NUM_DAYS = 30
+NUM_DAYS = 365
 
 # Existing machine IDs
 MACHINE_IDS = [1, 2, 3, 4, 5]
 
 # Simulation start date
-START_DATE = datetime(2026, 7, 20)
+START_DATE = datetime(2025, 8, 24)
 
 print("Data generation setup ready")
 print(f"Machines: {MACHINE_IDS}")
