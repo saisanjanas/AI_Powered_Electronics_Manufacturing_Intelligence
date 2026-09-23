@@ -11,7 +11,6 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import PlaceholderPage from './pages/PlaceholderPage'
 import ProtectedRoute from './components/auth/ProtectedRoute'
-import { grafanaDashboards } from './config/grafanaDashboards'
 
 export default function App() {
   return (
@@ -29,6 +28,7 @@ export default function App() {
           </ProtectedRoute>
         }
       />
+
       <Route
         path="/equipment"
         element={
@@ -37,6 +37,7 @@ export default function App() {
           </ProtectedRoute>
         }
       />
+
       <Route
         path="/equipment/:id"
         element={
@@ -45,6 +46,7 @@ export default function App() {
           </ProtectedRoute>
         }
       />
+
       <Route
         path="/production"
         element={
@@ -53,6 +55,7 @@ export default function App() {
           </ProtectedRoute>
         }
       />
+
       <Route
         path="/quality"
         element={
@@ -61,6 +64,7 @@ export default function App() {
           </ProtectedRoute>
         }
       />
+
       <Route
         path="/maintenance"
         element={
@@ -69,6 +73,7 @@ export default function App() {
           </ProtectedRoute>
         }
       />
+
       <Route
         path="/ai-insights"
         element={
@@ -77,6 +82,7 @@ export default function App() {
           </ProtectedRoute>
         }
       />
+
       <Route
         path="/preferences"
         element={
@@ -87,66 +93,82 @@ export default function App() {
       />
 
       <Route
-        path="/analytics/production"
-        element={
+          path="/analytics/production"
+          element={
           <ProtectedRoute>
-            <PlaceholderPage
+          <PlaceholderPage
               title="Production Analytics"
               breadcrumb="Analytics / Production"
-              description="Deeper production analytics from the live Grafana dashboard."
-              dashboards={[grafanaDashboards.production]}
-            />
-          </ProtectedRoute>
-        }
+              description="Detailed production analytics and performance information."
+              image="/images/production _trends.png"
       />
+    </ProtectedRoute>
+  }
+/>
+
       <Route
         path="/analytics/equipment"
         element={
-          <ProtectedRoute>
-            <PlaceholderPage
-              title="Equipment Analytics"
-              breadcrumb="Analytics / Equipment"
-              description="Fleet-wide machine status and sensor trends from Grafana."
-              dashboards={[grafanaDashboards.machineStatus, grafanaDashboards.sensorsTrend]}
-            />
-          </ProtectedRoute>
-        }
+        <ProtectedRoute>
+        <PlaceholderPage
+            title="Equipment Analytics"
+            breadcrumb="Analytics / Equipment"
+            description="Detailed equipment performance and utilization analytics."
+            images={[
+            "/images/equipment1.png",
+            "/images/equipment2.png",
+        ]}
       />
+    </ProtectedRoute>
+  }
+/>
+
       <Route
         path="/analytics/quality"
         element={
-          <ProtectedRoute>
-            <PlaceholderPage
-              title="Quality Analytics"
-              breadcrumb="Analytics / Quality"
-              description="Deeper quality analytics from the live Grafana dashboard."
-              dashboards={[grafanaDashboards.quality]}
-            />
-          </ProtectedRoute>
-        }
+        <ProtectedRoute>
+        <PlaceholderPage
+            title="Quality Analytics"
+            breadcrumb="Analytics / Quality"
+            description="Detailed quality and defect analytics."
+            images={[
+            "/images/quality1.png",
+            "/images/quality2.png",
+        ]}
       />
+    </ProtectedRoute>
+  }
+/>
+
       <Route
         path="/analytics/downtime"
         element={
-          <ProtectedRoute>
-            <PlaceholderPage
-              title="Downtime Analytics"
-              breadcrumb="Analytics / Downtime"
-              description="Downtime trends over the past 90 days from Grafana."
-              dashboards={[grafanaDashboards.downtime90d]}
-            />
-          </ProtectedRoute>
-        }
+        <ProtectedRoute>
+        <PlaceholderPage
+            title="Downtime Analytics"
+            breadcrumb="Analytics / Downtime"
+            description="Detailed downtime and maintenance analytics."
+            image="/images/downtime.png"
       />
+    </ProtectedRoute>
+  }
+/>
 
       {/* Settings now lives at /preferences — keep the old sidebar link working */}
-      <Route path="/settings" element={<Navigate to="/preferences" replace />} />
+      <Route
+        path="/settings"
+        element={<Navigate to="/preferences" replace />}
+      />
 
       <Route
         path="/help"
         element={
           <ProtectedRoute>
-            <PlaceholderPage title="Help" breadcrumb="Manufacturing / Help" description="Documentation and support resources." />
+            <PlaceholderPage
+              title="Help"
+              breadcrumb="Manufacturing / Help"
+              description="Documentation and support resources."
+            />
           </ProtectedRoute>
         }
       />
@@ -155,7 +177,11 @@ export default function App() {
         path="*"
         element={
           <ProtectedRoute>
-            <PlaceholderPage title="Page not found" breadcrumb="Manufacturing" description="That page doesn't exist yet." />
+            <PlaceholderPage
+              title="Page not found"
+              breadcrumb="Manufacturing"
+              description="That page doesn't exist yet."
+            />
           </ProtectedRoute>
         }
       />

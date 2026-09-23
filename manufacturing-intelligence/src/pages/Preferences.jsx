@@ -1,24 +1,28 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Check } from 'lucide-react'
 import DashboardLayout from '../components/layout/DashboardLayout'
 import Card from '../components/ui/Card'
 import Button from '../components/ui/Button'
 import { LoadingSkeleton, ErrorState } from '../components/ui/States'
-import { preferencesService } from '../services/preferencesService'
+import { usePreferences } from '../context/PreferencesContext'
 
 const THEME_OPTIONS = [
   { value: 'light', label: 'Light' },
   { value: 'dark', label: 'Dark' }
 ]
+
 const RANGE_OPTIONS = [
   { value: 'today', label: 'Today' },
   { value: '7d', label: 'Last 7 Days' },
-  { value: '30d', label: 'Last 30 Days' }
+  { value: '30d', label: 'Last 30 Days' },
+  { value: '90d', label: 'Last 90 Days' }
 ]
+
 const UNIT_OPTIONS = [
   { value: 'celsius', label: 'Celsius (°C)' },
   { value: 'fahrenheit', label: 'Fahrenheit (°F)' }
 ]
+
 const LANDING_OPTIONS = [
   { value: 'overview', label: 'Overview' },
   { value: 'equipment', label: 'Equipment' },
@@ -28,14 +32,16 @@ const LANDING_OPTIONS = [
 
 function SegmentedControl({ options, value, onChange }) {
   return (
-    <div className="inline-flex rounded-lg border border-surface-border bg-surface-bg p-1">
+    <div className="inline-flex flex-wrap rounded-lg border border-surface-border bg-surface-bg p-1 gap-1">
       {options.map((opt) => (
         <button
           key={opt.value}
           type="button"
           onClick={() => onChange(opt.value)}
           className={`px-3 py-1.5 text-sm rounded-md transition-colors ${
-            value === opt.value ? 'bg-white text-primary shadow-card font-medium' : 'text-ink-muted hover:text-ink'
+            value === opt.value
+              ? 'bg-white text-primary shadow-card font-medium'
+              : 'text-ink-muted hover:text-ink'
           }`}
         >
           {opt.label}
@@ -49,8 +55,11 @@ function Toggle({ checked, onChange }) {
   return (
     <button
       type="button"
+      aria-pressed={checked}
       onClick={() => onChange(!checked)}
-      className={`relative h-6 w-11 rounded-full transition-colors ${checked ? 'bg-primary' : 'bg-slate-200'}`}
+      className={`relative h-6 w-11 rounded-full transition-colors ${
+        checked ? 'bg-primary' : 'bg-slate-200'
+      }`}
     >
       <span
         className={`absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform ${
@@ -63,43 +72,52 @@ function Toggle({ checked, onChange }) {
 
 function Row({ label, description, children }) {
   return (
-    <div className="flex items-center justify-between py-4 border-b border-surface-border last:border-0">
+    <div className="flex items-center justify-between gap-6 py-4 border-b border-surface-border last:border-0">
       <div>
-        <p className="text-sm font-medium text-ink">{label}</p>
-        {description && <p className="text-xs text-ink-muted mt-0.5">{description}</p>}
+        <p className="text-sm font-medium text-ink">
+          {label}
+        </p>
+
+        {description && (
+          <p className="text-xs text-ink-muted mt-0.5">
+            {description}
+          </p>
+        )}
       </div>
+
       {children}
     </div>
   )
 }
 
 export default function Preferences() {
-  const [prefs, setPrefs] = useState(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
+  const {
+    preferences,
+    loading,
+    updatePreference,
+    savePreferences,
+  } = usePreferences()
+
   const [saving, setSaving] = useState(false)
   const [saved, setSaved] = useState(false)
-
-  useEffect(() => {
-    preferencesService
-      .get()
-      .then(setPrefs)
-      .catch(setError)
-      .finally(() => setLoading(false))
-  }, [])
+  const [error, setError] = useState(null)
 
   function update(key, value) {
-    setPrefs((p) => ({ ...p, [key]: value }))
+    updatePreference(key, value)
     setSaved(false)
+    setError(null)
   }
 
   async function handleSave() {
     setSaving(true)
     setSaved(false)
+    setError(null)
+
     try {
-      await preferencesService.update(prefs)
+      await savePreferences()
       setSaved(true)
     } catch (err) {
+      console.error(err)
       setError(err)
     } finally {
       setSaving(false)
@@ -107,60 +125,119 @@ export default function Preferences() {
   }
 
   return (
-    <DashboardLayout title="Preferences" breadcrumb="Manufacturing / Preferences">
+    <DashboardLayout
+      title="Preferences"
+      breadcrumb="Manufacturing / Preferences"
+    >
       <div className="mb-6">
-        <h2 className="text-lg font-semibold text-ink">Preferences</h2>
-        <p className="text-sm text-ink-muted mt-1">Personalize how the dashboard looks and behaves for your account.</p>
+        <h2 className="text-lg font-semibold text-ink">
+          Preferences
+        </h2>
+
+        <p className="text-sm text-ink-muted mt-1">
+          Personalize how the dashboard looks and behaves for your account.
+        </p>
       </div>
 
       <Card className="max-w-2xl">
         {loading && <LoadingSkeleton rows={4} />}
-        {error && <ErrorState onRetry={() => window.location.reload()} />}
 
-        {prefs && (
+        {!loading && error && (
+          <ErrorState
+            onRetry={() => window.location.reload()}
+          />
+        )}
+
+        {!loading && preferences && (
           <>
-            <Row label="Theme" description="Choose a light or dark interface.">
-              <SegmentedControl options={THEME_OPTIONS} value={prefs.theme} onChange={(v) => update('theme', v)} />
+            {/* Theme */}
+            <Row
+              label="Theme"
+              description="Choose a light or dark interface."
+            >
+              <SegmentedControl
+                options={THEME_OPTIONS}
+                value={preferences.theme}
+                onChange={(value) => update('theme', value)}
+              />
             </Row>
 
-            <Row label="Default date range" description="Applied to the Overview dashboard on load.">
+            {/* Default Date Range */}
+            <Row
+              label="Default date range"
+              description="Applied to the Overview dashboard on load."
+            >
               <SegmentedControl
                 options={RANGE_OPTIONS}
-                value={prefs.defaultDateRange}
-                onChange={(v) => update('defaultDateRange', v)}
+                value={preferences.defaultDateRange}
+                onChange={(value) =>
+                  update('defaultDateRange', value)
+                }
               />
             </Row>
 
-            <Row label="Temperature unit" description="Used across equipment temperature readings.">
+            {/* Temperature Unit */}
+            <Row
+              label="Temperature unit"
+              description="Used across equipment temperature readings."
+            >
               <SegmentedControl
                 options={UNIT_OPTIONS}
-                value={prefs.temperatureUnit}
-                onChange={(v) => update('temperatureUnit', v)}
+                value={preferences.temperatureUnit}
+                onChange={(value) =>
+                  update('temperatureUnit', value)
+                }
               />
             </Row>
 
-            <Row label="Default landing page" description="The page you see right after signing in.">
+            {/* Default Landing Page */}
+            <Row
+              label="Default landing page"
+              description="The page you see right after signing in."
+            >
               <select
-                value={prefs.defaultLandingPage}
-                onChange={(e) => update('defaultLandingPage', e.target.value)}
+                value={preferences.defaultLandingPage}
+                onChange={(e) =>
+                  update(
+                    'defaultLandingPage',
+                    e.target.value
+                  )
+                }
                 className="h-9 rounded-lg border border-surface-border bg-white px-3 text-sm outline-none focus:border-primary"
               >
-                {LANDING_OPTIONS.map((opt) => (
-                  <option key={opt.value} value={opt.value}>
-                    {opt.label}
+                {LANDING_OPTIONS.map((option) => (
+                  <option
+                    key={option.value}
+                    value={option.value}
+                  >
+                    {option.label}
                   </option>
                 ))}
               </select>
             </Row>
 
-            <Row label="Email notifications" description="Receive email alerts for critical equipment and quality events.">
-              <Toggle checked={prefs.emailNotifications} onChange={(v) => update('emailNotifications', v)} />
+            {/* Email Notifications */}
+            <Row
+              label="Email notifications"
+              description="Receive email alerts for critical equipment and quality events."
+            >
+              <Toggle
+                checked={preferences.emailNotifications}
+                onChange={(value) =>
+                  update('emailNotifications', value)
+                }
+              />
             </Row>
 
+            {/* Save */}
             <div className="flex items-center gap-3 pt-5">
-              <Button onClick={handleSave} disabled={saving}>
+              <Button
+                onClick={handleSave}
+                disabled={saving}
+              >
                 {saving ? 'Saving...' : 'Save preferences'}
               </Button>
+
               {saved && (
                 <span className="flex items-center gap-1.5 text-sm text-status-success">
                   <Check size={15} />
