@@ -57,4 +57,3 @@ What caused the increase in defective products?
 What could be causing repeated machine failures?
 
 Are abnormal sensor readings affecting production?
-
