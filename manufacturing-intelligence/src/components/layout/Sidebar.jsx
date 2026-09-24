@@ -121,13 +121,13 @@ export default function Sidebar({ collapsed, onToggle }) {
           collapsed && 'justify-center px-0'
         )}
       >
-        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary">
-          <Activity
-            size={17}
-            strokeWidth={2.5}
-            className="text-white"
-          />
-        </div>
+       <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden">
+      <img
+            src="/logo.png"
+            alt="Manufacturing Intelligence"
+            className="h-10 w-10 object-contain"
+      />
+      </div>
 
         {!collapsed && (
           <span className="text-sm font-semibold tracking-tight truncate">
