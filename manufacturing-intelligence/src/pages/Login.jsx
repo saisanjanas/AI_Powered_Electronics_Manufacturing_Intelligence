@@ -33,18 +33,50 @@ export default function Login() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-surface-bg px-4">
-      <div className="w-full max-w-sm">
+    <div
+      className="
+        relative
+        min-h-screen
+        w-full
+        flex
+        items-center
+        justify-center
+        bg-surface-bg
+        px-4
+        overflow-hidden
+      "
+    >
+
+      {/* Full-screen logo watermark */}
+      <img
+        src="/logo.png"
+        alt=""
+        aria-hidden="true"
+        className="
+          pointer-events-none
+          absolute
+          -inset-4
+          w-[calc(100%+32px)]
+          h-[calc(100%+32px)]
+          object-cover
+          opacity-[0.05]
+          blur-[4px]
+        "
+      />
+
+      {/* Login content */}
+      <div className="relative z-10 w-full max-w-sm">
 
         {/* Logo and title */}
         <div className="flex flex-col items-center mb-8">
 
+          {/* Clear logo */}
           <div className="flex items-center justify-center mb-3">
-          <img
+            <img
               src="/logo.png"
               alt="Manufacturing Intelligence"
               className="h-20 w-20 object-contain"
-          />
+            />
           </div>
 
           <h1 className="text-lg font-semibold text-ink">
@@ -59,13 +91,37 @@ export default function Login() {
         {/* Login form */}
         <form
           onSubmit={handleSubmit}
-          className="bg-surface-card border border-surface-border rounded-card shadow-card p-6 space-y-4"
+          className="
+            bg-surface-card
+            border
+            border-surface-border
+            rounded-card
+            shadow-card
+            p-6
+            space-y-4
+          "
         >
 
           {/* Error message */}
           {error && (
-            <div className="flex items-start gap-2 rounded-lg bg-status-criticalBg text-status-critical text-sm px-3 py-2.5">
-              <AlertCircle size={16} className="shrink-0 mt-0.5" />
+            <div
+              className="
+                flex
+                items-start
+                gap-2
+                rounded-lg
+                bg-status-criticalBg
+                text-status-critical
+                text-sm
+                px-3
+                py-2.5
+              "
+            >
+              <AlertCircle
+                size={16}
+                className="shrink-0 mt-0.5"
+              />
+
               {error}
             </div>
           )}
@@ -76,8 +132,24 @@ export default function Login() {
               Email
             </label>
 
-            <div className="flex items-center gap-2 h-10 rounded-lg border border-surface-border px-3 focus-within:border-primary transition-colors">
-              <Mail size={15} className="text-ink-muted" />
+            <div
+              className="
+                flex
+                items-center
+                gap-2
+                h-10
+                rounded-lg
+                border
+                border-surface-border
+                px-3
+                focus-within:border-primary
+                transition-colors
+              "
+            >
+              <Mail
+                size={15}
+                className="text-ink-muted"
+              />
 
               <input
                 type="email"
@@ -86,7 +158,13 @@ export default function Login() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="you@company.com"
-                className="flex-1 bg-transparent outline-none text-sm placeholder:text-ink-muted"
+                className="
+                  flex-1
+                  bg-transparent
+                  outline-none
+                  text-sm
+                  placeholder:text-ink-muted
+                "
               />
             </div>
           </div>
@@ -97,8 +175,24 @@ export default function Login() {
               Password
             </label>
 
-            <div className="flex items-center gap-2 h-10 rounded-lg border border-surface-border px-3 focus-within:border-primary transition-colors">
-              <Lock size={15} className="text-ink-muted" />
+            <div
+              className="
+                flex
+                items-center
+                gap-2
+                h-10
+                rounded-lg
+                border
+                border-surface-border
+                px-3
+                focus-within:border-primary
+                transition-colors
+              "
+            >
+              <Lock
+                size={15}
+                className="text-ink-muted"
+              />
 
               <input
                 type="password"
@@ -107,7 +201,13 @@ export default function Login() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className="flex-1 bg-transparent outline-none text-sm placeholder:text-ink-muted"
+                className="
+                  flex-1
+                  bg-transparent
+                  outline-none
+                  text-sm
+                  placeholder:text-ink-muted
+                "
               />
             </div>
           </div>
