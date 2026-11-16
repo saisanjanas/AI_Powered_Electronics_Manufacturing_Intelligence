@@ -5,7 +5,7 @@
 // this file and USE_MOCKS below need to change — no component code depends
 // on how data is fetched.
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:4000/api'
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api'
 
 // Now that the Node/Express backend exists (see /backend), USE_MOCKS
 // defaults to false — every domain service below hits the real API. Flip

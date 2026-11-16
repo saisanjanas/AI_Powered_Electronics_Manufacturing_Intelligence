@@ -1,0 +1,24 @@
+CREATE TABLE IF NOT EXISTS users (
+  user_id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(150) NOT NULL,
+  email VARCHAR(191) NOT NULL,
+  password_hash VARCHAR(255) NOT NULL,
+  role VARCHAR(50) NOT NULL DEFAULT 'viewer',
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (user_id),
+  UNIQUE KEY users_email_unique (email)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE IF NOT EXISTS user_preferences (
+  user_id INT NOT NULL,
+  theme VARCHAR(20) NOT NULL DEFAULT 'light',
+  default_date_range VARCHAR(20) NOT NULL DEFAULT '7d',
+  temperature_unit VARCHAR(10) NOT NULL DEFAULT 'celsius',
+  email_notifications TINYINT(1) NOT NULL DEFAULT 1,
+  default_landing_page VARCHAR(50) NOT NULL DEFAULT 'overview',
+  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (user_id),
+  CONSTRAINT user_preferences_ibfk_1
+    FOREIGN KEY (user_id) REFERENCES users (user_id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
